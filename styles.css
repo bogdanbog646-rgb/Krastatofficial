@@ -126,6 +126,16 @@ h1 em { color: var(--mint); font-family: var(--serif); font-weight: 600; letter-
 .seal-label-bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
 @keyframes rotate { to { transform: rotate(360deg); } }
 
+.hero-flag { position: relative; justify-self: end; width: min(100%, 420px); }
+.flag-frame { position: relative; padding: 10px; border: 1px solid rgba(216,177,110,.68); background: rgba(7,19,30,.82); box-shadow: 18px 18px 0 rgba(168,216,207,.08), 0 0 55px rgba(216,177,110,.08); transform: rotate(2deg); }
+.flag-frame::before, .flag-frame::after { position: absolute; width: 26px; height: 26px; content: ''; border-color: var(--mint); border-style: solid; }
+.flag-frame::before { top: -8px; left: -8px; border-width: 1px 0 0 1px; }
+.flag-frame::after { right: -8px; bottom: -8px; border-width: 0 1px 1px 0; }
+.flag-frame img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.flag-caption { display: flex; align-items: center; gap: 10px; margin-top: 25px; color: var(--gold); font-family: var(--mono); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
+.flag-caption-mark { color: var(--mint); font-size: 13px; }
+.flag-caption-year { margin-left: auto; color: var(--ink-muted); font-size: 8px; }
+
 .manifesto { width: min(var(--max), calc(100% - 80px)); margin: 0 auto 78px; display: flex; align-items: center; gap: 24px; color: var(--gold); }
 .manifesto-line { height: 1px; flex: 1; background: linear-gradient(to right, transparent, var(--gold-soft)); opacity: .65; }
 .manifesto-line:last-child { background: linear-gradient(to left, transparent, var(--gold-soft)); }
@@ -180,7 +190,7 @@ h2 { margin: 0; color: var(--ink); font-family: var(--serif); font-size: clamp(3
 @media (max-width: 850px) {
   .site-header, .hero, .manifesto, .content-layout, .site-footer { width: min(100% - 40px, var(--max)); }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 58px; padding: 74px 0 55px; }
-  .hero-seal { justify-self: start; width: min(280px, 68vw); margin-left: 6px; }
+  .hero-flag { justify-self: start; width: min(460px, 100%); margin-left: 6px; }
   .manifesto { margin-bottom: 58px; }
   .content-layout { display: block; }
   .toc-sticky { position: relative; top: auto; }
