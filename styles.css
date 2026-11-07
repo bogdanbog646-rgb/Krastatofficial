@@ -154,6 +154,23 @@ h1 em { color: var(--mint); font-family: var(--serif); font-weight: 600; letter-
 .lyrics-stanza p:last-child { margin-bottom: 0; }
 .lyrics-stanza.chorus p:first-child { color: var(--mint-bright); }
 
+.currency-card { width: min(var(--max), calc(100% - 80px)); margin: 0 auto 110px; display: grid; grid-template-columns: minmax(260px, .65fr) minmax(0, 1.35fr); align-items: center; gap: clamp(45px, 9vw, 135px); padding: 42px 0; border-bottom: 1px solid var(--line); }
+.bubl-coin { position: relative; width: min(250px, 64vw); aspect-ratio: 1; justify-self: center; display: grid; place-items: center; align-content: center; border: 12px solid transparent; border-radius: 50%; background: linear-gradient(var(--night), var(--night)) padding-box, conic-gradient(from 205deg, #b77b25 0deg, #f4d477 55deg, #d39b31 116deg, #f9e18a 180deg, #c48725 242deg, #e9c45d 315deg, #b77b25 360deg) border-box; box-shadow: inset 0 0 0 1px rgba(255,255,255,.35), inset 0 -12px 24px rgba(0,0,0,.28), 0 0 0 1px rgba(216,177,110,.22), 0 18px 38px rgba(0,0,0,.28); color: var(--gold); }
+.bubl-coin::before { position: absolute; inset: 8px; content: ''; border: 1px solid rgba(244,212,119,.45); border-radius: 50%; }
+.bubl-coin::after { position: absolute; inset: 25%; content: ''; border: 1px dashed rgba(216,177,110,.45); border-radius: 50%; }
+.bubl-hole { position: absolute; inset: 37%; z-index: 1; border: 1px solid rgba(216,177,110,.34); border-radius: 50%; background: radial-gradient(circle at 35% 25%, #142d3b, #061018 70%); box-shadow: inset 0 8px 15px rgba(0,0,0,.42), 0 0 0 5px rgba(216,177,110,.07); }
+.coin-top, .coin-bottom, .coin-unit { position: absolute; z-index: 2; font-family: var(--mono); letter-spacing: .18em; text-transform: uppercase; }
+.coin-top { top: 17%; font-size: 8px; }
+.coin-bottom { bottom: 16%; font-size: 7px; color: var(--ink-muted); }
+.coin-value { position: relative; z-index: 2; margin-top: 12px; font-family: var(--serif); font-size: 53px; line-height: .8; }
+.coin-unit { position: relative; z-index: 2; margin-top: 10px; font-size: 9px; }
+.currency-copy .section-label { margin: 0 0 12px; color: var(--mint); }
+.currency-copy h2 { margin-bottom: 13px; }
+.currency-copy > p:not(.section-label):not(.currency-note) { max-width: 510px; margin: 0 0 22px; color: var(--ink-soft); font-size: 16px; line-height: 1.7; }
+.currency-rate { display: flex; align-items: center; gap: 16px; color: var(--mint-bright); font-family: var(--mono); font-size: 13px; letter-spacing: .04em; }
+.currency-rate span { color: var(--gold); }
+.currency-note { margin: 22px 0 0; color: var(--ink-muted); font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+
 .content-layout { width: min(var(--max), calc(100% - 80px)); margin: 0 auto; display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: clamp(55px, 9vw, 140px); align-items: start; }
 .toc-sticky { position: sticky; top: 28px; }
 .toc-panel { min-width: 0; }
@@ -204,6 +221,8 @@ h2 { margin: 0; color: var(--ink); font-family: var(--serif); font-size: clamp(3
   .site-header, .hero, .manifesto, .content-layout, .site-footer { width: min(100% - 40px, var(--max)); }
   .anthem-card { width: min(100% - 40px, var(--max)); grid-template-columns: 1fr; gap: 35px; margin-bottom: 70px; }
   .anthem-lyrics { padding: 28px 0 0; border-top: 1px solid var(--line); border-left: 0; }
+  .currency-card { width: min(100% - 40px, var(--max)); grid-template-columns: 1fr; gap: 38px; margin-bottom: 70px; }
+  .bubl-coin { justify-self: start; }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 58px; padding: 74px 0 55px; }
   .hero-flag { justify-self: start; width: min(460px, 100%); margin-left: 6px; }
   .manifesto { margin-bottom: 58px; }
@@ -232,6 +251,8 @@ h2 { margin: 0; color: var(--ink); font-family: var(--serif); font-size: clamp(3
   .anthem-card { width: calc(100% - 32px); padding: 28px 0 30px; }
   .lyrics-columns { grid-template-columns: 1fr; gap: 0; }
   .lyrics-stanza p { font-size: 15px; }
+  .currency-card { width: calc(100% - 32px); padding: 32px 0; }
+  .currency-rate { gap: 10px; font-size: 11px; }
   .toc-nav { grid-template-columns: 1fr; }
   .document-section { padding-bottom: 54px; margin-bottom: 53px; }
   .section-heading { grid-template-columns: 38px 1fr; gap: 8px; margin-bottom: 24px; }
