@@ -172,15 +172,15 @@ h1 em { color: var(--mint); font-family: var(--serif); font-weight: 600; letter-
 .currency-note { margin: 22px 0 0; color: var(--ink-muted); font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
 
 .pupol-card { width: min(var(--max), calc(100% - 80px)); margin: -70px auto 110px; display: grid; grid-template-columns: minmax(260px, .65fr) minmax(0, 1.35fr); align-items: center; gap: clamp(45px, 9vw, 135px); padding: 42px 0; border-bottom: 1px solid var(--line); }
-.pupol-coin { position: relative; width: min(220px, 58vw); aspect-ratio: 1; justify-self: center; display: grid; place-items: center; align-content: center; border: 9px solid #c99756; border-radius: 50%; background: radial-gradient(circle at 34% 25%, #f2cb91 0, #dca96b 32%, #b8753f 72%, #885031 100%); box-shadow: inset 0 0 0 2px rgba(255,235,186,.6), inset 0 -16px 22px rgba(87,41,23,.3), 0 0 0 1px rgba(216,177,110,.35), 0 18px 35px rgba(0,0,0,.24); color: #6f3f28; }
-.pupol-coin::before { position: absolute; inset: 12px; content: ''; border: 1px solid rgba(255,231,180,.55); border-radius: 50%; }
-.pupol-coin::after { position: absolute; inset: 24%; content: ''; border: 1px solid rgba(105,51,29,.28); border-radius: 50%; box-shadow: inset 0 4px 9px rgba(79,36,21,.2); }
+.pupol-coin { position: relative; width: min(235px, 60vw); aspect-ratio: 1; justify-self: center; display: grid; place-items: center; align-content: center; border: 0; border-radius: 48% 52% 50% 46% / 51% 47% 53% 49%; background: radial-gradient(ellipse at 35% 25%, #f7c9b1 0, #e8a58f 35%, #bd725f 72%, #754037 100%); box-shadow: inset 18px 19px 28px rgba(255,228,209,.36), inset -20px -23px 30px rgba(88,38,37,.31), 0 19px 38px rgba(0,0,0,.25); color: #713d3a; transform: rotate(-3deg); }
+.pupol-coin::before { position: absolute; inset: 9%; content: ''; border: 2px solid rgba(255,211,190,.2); border-radius: 45% 55% 48% 52%; box-shadow: inset 0 0 18px rgba(255,207,187,.18), 0 0 0 12px rgba(140,67,58,.08); }
+.pupol-coin::after { position: absolute; inset: 24%; content: ''; border: 1px solid rgba(114,53,49,.2); border-radius: 48% 52% 45% 55%; box-shadow: inset 0 8px 13px rgba(83,34,35,.13), 0 0 0 10px rgba(251,191,169,.13), 0 0 0 20px rgba(112,50,47,.08); }
 .pupol-top, .pupol-bottom, .pupol-unit { position: absolute; z-index: 2; font-family: var(--mono); letter-spacing: .14em; text-transform: uppercase; }
 .pupol-top { top: 17%; font-size: 7px; }
-.pupol-bottom { bottom: 16%; color: rgba(91,48,28,.75); font-size: 6px; }
+.pupol-bottom { bottom: 16%; color: rgba(91,48,48,.72); font-size: 6px; }
 .pupol-value { position: relative; z-index: 3; margin-top: 4px; font-family: var(--serif); font-size: 47px; line-height: .8; }
 .pupol-unit { position: relative; z-index: 3; margin-top: 9px; font-size: 8px; }
-.pupol-center { position: absolute; inset: 38%; z-index: 2; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #c98b54, #6e3b28 72%); box-shadow: inset 5px 7px 10px rgba(60,27,17,.5), 0 0 0 5px rgba(255,226,164,.11); }
+.pupol-center { position: absolute; inset: 36%; z-index: 2; border-radius: 47% 53% 52% 48%; background: radial-gradient(ellipse at 34% 25%, #b87366 0, #7d413f 58%, #4f292d 100%); box-shadow: inset 7px 9px 12px rgba(48,20,25,.58), inset -3px -3px 6px rgba(242,162,140,.18), 0 0 0 7px rgba(248,184,163,.14); transform: rotate(7deg); }
 .pupol-copy .section-label { margin: 0 0 12px; color: var(--mint); }
 .pupol-copy h2 { margin-bottom: 13px; }
 .pupol-copy > p:not(.section-label):not(.currency-note) { max-width: 510px; margin: 0 0 22px; color: var(--ink-soft); font-size: 16px; line-height: 1.7; }
