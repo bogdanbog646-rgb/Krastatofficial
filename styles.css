@@ -108,6 +108,8 @@ h1 em { color: var(--mint); font-family: var(--serif); font-weight: 600; letter-
 .button-primary:hover { background: var(--mint-bright); }
 .button-ghost { color: var(--ink-soft); }
 .button-ghost:hover { color: var(--mint); background: rgba(168,216,207,.06); }
+.button-chat { color: var(--gold); border-color: rgba(216,177,110,.5); }
+.button-chat:hover { color: var(--night); background: var(--gold); border-color: var(--gold); }
 
 .hero-seal { position: relative; justify-self: end; width: min(100%, 360px); aspect-ratio: 1; display: grid; place-items: center; color: var(--gold); }
 .seal-orbit { position: absolute; border: 1px solid rgba(216,177,110,.6); border-radius: 50%; }
